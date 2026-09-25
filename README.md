@@ -6,7 +6,7 @@ Landing page premium e responsiva para GitHub Pages, construída para conversão
 - index.html
 - style.css
 - script.js
-- assets/logo-principado.png
+- logo-principado.png
 
 ## Recursos
 - Hero premium com foco em eventos musicais
@@ -24,7 +24,7 @@ Landing page premium e responsiva para GitHub Pages, construída para conversão
 
 ## Publicação no GitHub Pages
 1. Crie um repositório no GitHub.
-2. Envie o conteúdo mantendo a pasta `assets`.
+2. Envie o conteúdo mantendo os arquivos na raiz do repositório.
 3. Settings → Pages.
 4. Source: Deploy from a branch.
 5. Branch: `main` / folder: `/ (root)`.
