@@ -379,3 +379,13 @@ body{background:#050505}
     white-space:nowrap;
   }
 }
+
+
+/* ===== BRAND MARKS: CIRCULAR ===== */
+.brand-logo,
+.hero-logo{border-radius:50%;overflow:hidden}
+.header.is-scrolled .brand-logo{border-radius:50%}
+@media(max-width:700px){
+  .brand-logo,
+  .hero-logo{border-radius:50%}
+}
