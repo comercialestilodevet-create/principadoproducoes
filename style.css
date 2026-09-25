@@ -117,3 +117,19 @@ main > section:not(.hero).is-visible::before {
 .statement-signature span{color:#aaa}
 .statement-signature strong{color:#050505}
 @media(max-width:700px){.statement:after{font-size:60vw;bottom:-.12em}.statement-index{position:static;margin-bottom:24px}.statement-highlight{font-size:34px}.statement-copy{padding-top:0}}
+
+
+/* ===== EVENT CATEGORIES / SHOWCASE ===== */
+.event-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto}
+.event-card{min-height:330px}
+.main-event{grid-column:span 2;min-height:430px;background:#050505}
+.main-event:before{content:"LIVE";position:absolute;right:-35px;top:35px;font:800 150px/.8 Manrope,sans-serif;letter-spacing:-.08em;color:rgba(255,255,255,.035);transform:rotate(90deg);pointer-events:none}
+.event-orbit{position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-90px;top:-95px;pointer-events:none}
+.event-orbit:before,.event-orbit:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.07);border-radius:50%;inset:28px}
+.event-orbit:after{inset:70px}
+.event-card:not(.main-event) .event-icon{font-size:25px;color:#777}
+.event-card:not(.main-event){min-height:270px}
+.event-card:not(.main-event) .event-content h3{font-size:31px}
+.event-card:not(.main-event) .event-content p{font-size:12px}
+@media(max-width:900px){.event-grid{grid-template-columns:1fr 1fr}.main-event{grid-column:span 2}}
+@media(max-width:700px){.event-grid{grid-template-columns:1fr}.main-event{grid-column:auto;min-height:410px}.event-card:not(.main-event){min-height:310px}}
