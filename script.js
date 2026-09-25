@@ -172,3 +172,16 @@ if(hero && !prefersReducedMotion){
     hero.style.setProperty("--hero-shift",`${y*.08}px`);
   },{passive:true});
 }
+
+
+/* Experience signature: gentle spotlight follows the pointer. */
+const experienceBox=document.querySelector(".experience-box");
+if(experienceBox && !prefersReducedMotion && window.matchMedia("(pointer:fine)").matches){
+  experienceBox.addEventListener("pointermove",e=>{
+    const r=experienceBox.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width)*100;
+    const y=((e.clientY-r.top)/r.height)*100;
+    experienceBox.style.background=`radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,.065), transparent 32%), #050505`;
+  });
+  experienceBox.addEventListener("pointerleave",()=>{experienceBox.style.background="#050505"});
+}
