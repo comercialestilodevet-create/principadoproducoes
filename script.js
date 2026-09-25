@@ -51,3 +51,18 @@ document.addEventListener("mousemove",e=>{
   const glow=document.querySelector(".cursor-glow");
   if(window.innerWidth>900){glow.style.opacity=".025";glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"}
 });
+
+
+/* Keep the fixed brand readable over dark and light sections. */
+const header=document.querySelector(".header");
+const darkAreaSelector=".hero, .services, .no-portfolio, .footer";
+const updateHeaderContrast=()=>{
+  if(!header) return;
+  const x=Math.min(18,window.innerWidth-1);
+  const y=Math.min(104,window.innerHeight-1);
+  const target=document.elementFromPoint(x,y)?.closest(darkAreaSelector);
+  header.classList.toggle("on-dark",!!target);
+};
+updateHeaderContrast();
+window.addEventListener("scroll",updateHeaderContrast,{passive:true});
+window.addEventListener("resize",updateHeaderContrast);
