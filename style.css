@@ -277,3 +277,35 @@ body{background:#050505}
 .experience-point:hover i{opacity:1;transform:none}
 @media(max-width:900px){.experience-box{grid-template-columns:1fr;gap:55px;min-height:auto}.experience-meta{margin-bottom:40px}}
 @media(max-width:700px){.experience-signature{padding:70px 0}.experience-box{padding:42px 25px;border-radius:26px}.experience-box:before{width:420px;height:420px;right:-260px}.experience-box:after{width:300px;height:300px;right:-180px}.experience-box h2{font-size:52px}.experience-lead{font-size:13px}.experience-stamp{margin-top:40px}.experience-point{grid-template-columns:28px 1fr 15px;padding:22px 0}.experience-point span{font-size:14px}.experience-point:hover{padding-left:5px}}
+
+
+/* ===== HEADER COMPACTO APÓS A HOME ===== */
+.header{transition:transform .45s cubic-bezier(.22,.61,.36,1),background .35s ease,filter .35s ease}
+.nav{transition:min-height .45s cubic-bezier(.22,.61,.36,1)}
+.brand{transition:gap .4s cubic-bezier(.22,.61,.36,1)}
+.brand-logo{transition:width .4s cubic-bezier(.22,.61,.36,1),height .4s cubic-bezier(.22,.61,.36,1),padding .4s ease,border-radius .4s ease,box-shadow .4s ease}
+.brand-text{transition:font-size .4s ease,opacity .3s ease}
+.brand-text small{transition:font-size .4s ease,margin-top .4s ease}
+.nav-links{transition:padding .4s ease,gap .4s ease,font-size .4s ease,box-shadow .4s ease}
+.nav-links>a:not(.nav-button){transition:color .25s ease,background .25s ease,padding .4s ease}
+.nav-button{transition:padding .4s ease,transform .25s ease,box-shadow .25s ease,background .25s ease}
+
+/* The hero keeps the generous brand scale; after leaving it the header becomes a compact floating bar. */
+.header.is-scrolled .nav{min-height:72px}
+.header.is-scrolled .brand{gap:9px}
+.header.is-scrolled .brand-logo{width:48px;height:48px;padding:5px;border-radius:10px;box-shadow:0 9px 25px rgba(0,0,0,.18)}
+.header.is-scrolled .brand-text{font-size:12px}
+.header.is-scrolled .brand-text small{font-size:6px;margin-top:5px}
+.header.is-scrolled .nav-links{padding:5px;gap:3px;font-size:12px;box-shadow:0 10px 32px rgba(0,0,0,.14)}
+.header.is-scrolled .nav-links>a:not(.nav-button){padding:9px 12px}
+.header.is-scrolled .nav-button{padding:10px 15px}
+
+/* Keep the compact proportions coherent when the header sits over dark sections. */
+.header.is-scrolled.on-dark .brand-logo{box-shadow:0 10px 30px rgba(0,0,0,.32)}
+
+@media(max-width:700px){
+  .header.is-scrolled .nav{min-height:64px}
+  .header.is-scrolled .brand-logo{width:44px;height:44px;padding:4px}
+  .header.is-scrolled .brand-text{font-size:11px}
+  .header.is-scrolled .nav-links{top:64px;padding:10px}
+}
