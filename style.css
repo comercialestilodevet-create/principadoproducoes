@@ -91,3 +91,11 @@ main > section:not(.hero).is-visible::before {
     transition: none;
   }
 }
+
+
+/* ===== HEADER CONTRAST / BRAND VISIBILITY ===== */
+.header .brand-text{color:#050505;transition:color .25s ease}
+.header.on-dark .brand-text{color:#fff}
+.header.on-dark .menu-toggle span{background:#fff}
+.header.on-dark .brand-logo{box-shadow:0 14px 40px rgba(0,0,0,.32)}
+@media(max-width:700px){.header.on-dark .brand-text{color:#fff}.header.on-dark .menu-toggle span{background:#fff}}
