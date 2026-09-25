@@ -83,10 +83,14 @@ const updateScrollUI=()=>{
   const max=document.documentElement.scrollHeight-window.innerHeight;
   const ratio=max>0?window.scrollY/max:0;
   progressBar.style.transform=`scaleX(${ratio})`;
-  if(!prefersReducedMotion && header){
-    const delta=window.scrollY-lastScrollY;
-    if(window.scrollY>120 && delta>7) header.classList.add("is-hidden");
-    if(delta<-7) header.classList.remove("is-hidden");
+  if(header){
+    header.classList.toggle("is-scrolled",window.scrollY>55);
+    if(!prefersReducedMotion){
+      const delta=window.scrollY-lastScrollY;
+      if(window.scrollY>120 && delta>7) header.classList.add("is-hidden");
+      if(delta<-7) header.classList.remove("is-hidden");
+      if(window.scrollY<=55) header.classList.remove("is-hidden");
+    }
   }
   lastScrollY=window.scrollY;
   ticking=false;
