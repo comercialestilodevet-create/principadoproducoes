@@ -99,3 +99,21 @@ main > section:not(.hero).is-visible::before {
 .header.on-dark .menu-toggle span{background:#fff}
 .header.on-dark .brand-logo{box-shadow:0 14px 40px rgba(0,0,0,.32)}
 @media(max-width:700px){.header.on-dark .brand-text{color:#fff}.header.on-dark .menu-toggle span{background:#fff}}
+
+
+/* ===== INSTITUTIONAL STATEMENT ===== */
+.statement{position:relative;overflow:hidden;background:#fff}
+.statement:after{content:"P";position:absolute;right:-.03em;bottom:-.28em;font:800 34vw/.75 Manrope,sans-serif;letter-spacing:-.1em;color:#f3f3ef;pointer-events:none;z-index:0}
+.statement-grid{position:relative;z-index:1}
+.statement-intro{position:relative}
+.statement-index{position:absolute;right:0;top:5px;font:700 10px Manrope,sans-serif;letter-spacing:.18em;color:#aaa}
+.statement h2{max-width:620px}
+.statement h2 em{display:block;color:#777}
+.statement-copy{padding-top:34px}
+.statement-highlight{font:800 clamp(30px,3.3vw,46px)/.92 Manrope,sans-serif;letter-spacing:-.045em;color:#111;margin-bottom:35px}
+.statement-highlight em{font-style:normal;color:#aaa}
+.statement-copy p{max-width:560px}
+.statement-signature{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:38px;font-size:10px;letter-spacing:.16em;font-weight:800}
+.statement-signature span{color:#aaa}
+.statement-signature strong{color:#050505}
+@media(max-width:700px){.statement:after{font-size:60vw;bottom:-.12em}.statement-index{position:static;margin-bottom:24px}.statement-highlight{font-size:34px}.statement-copy{padding-top:0}}
