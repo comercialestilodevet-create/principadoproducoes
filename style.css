@@ -356,3 +356,26 @@ body{background:#050505}
   .process-content p{font-size:12px}
   .process-content small{margin-top:25px}
 }
+
+
+/* ===== HOME NAV DIMENSION REFINEMENT ===== */
+@media(min-width:701px){
+  .header:not(.is-scrolled) .nav-links{
+    width:max-content;
+    max-width:calc(100vw - 430px);
+    min-height:64px;
+    padding:5px;
+    gap:2px;
+    font-size:12px;
+  }
+  .header:not(.is-scrolled) .nav-links>a{
+    white-space:nowrap;
+  }
+  .header:not(.is-scrolled) .nav-links>a:not(.nav-button){
+    padding:10px 13px;
+  }
+  .header:not(.is-scrolled) .nav-links .nav-button{
+    padding:11px 17px;
+    white-space:nowrap;
+  }
+}
