@@ -189,3 +189,20 @@ if(experienceBox && !prefersReducedMotion && window.matchMedia("(pointer:fine)")
   });
   experienceBox.addEventListener("pointerleave",()=>{experienceBox.style.background="#050505"});
 }
+
+
+/* Process timeline activation follows the user's scroll position. */
+const processTimeline=document.querySelector("[data-process]");
+const processSteps=[...(processTimeline?.querySelectorAll("[data-process-step]")||[])];
+if(processTimeline && processSteps.length){
+  const processObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        processSteps.forEach(step=>step.classList.remove("is-active"));
+        entry.target.classList.add("is-active");
+        processTimeline.classList.add("is-progress");
+      }
+    });
+  },{threshold:.55,rootMargin:"-8% 0px -35% 0px"});
+  processSteps.forEach(step=>processObserver.observe(step));
+}
