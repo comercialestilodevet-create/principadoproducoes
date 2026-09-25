@@ -389,3 +389,21 @@ body{background:#050505}
   .brand-logo,
   .hero-logo{border-radius:50%}
 }
+
+
+/* ===== LOGOS: FORCE TRUE CIRCULAR MASK ===== */
+.brand-logo,
+.hero-logo{
+  border-radius:50% !important;
+  overflow:hidden !important;
+  clip-path:circle(50% at 50% 50%) !important;
+  -webkit-clip-path:circle(50% at 50% 50%) !important;
+  background:#fff;
+}
+.brand-logo{padding:7px}
+.hero-logo{padding:22px}
+.header.is-scrolled .brand-logo{padding:5px;border-radius:50% !important}
+@media(max-width:700px){
+  .brand-logo{padding:5px}
+  .hero-logo{padding:16px}
+}
